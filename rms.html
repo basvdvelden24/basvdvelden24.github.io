@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""
+            />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+
+        <title>website test</title>
+    </head>
+    <body>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images\LOGOZWART.png" alt="">
+                    </a>
+                </li>
+                <li><a href='rms.html' onclick="return false">RMS Delta</a></li>
+                <li><a href='ganges.html'>Ganges Delta</a></li>
+                <li><a href='overmij.html'>Over mij</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div class="hero">
+            <div class="hero-img">
+                <img src="images/RMS.jpg" alt="">
+
+                <h1 class="rms-hero-txt">
+                    RMS DELTA
+                </h1>
+            </div>
+
+            <div class="informatieblok" id="rms-1">
+                <div class="informatieblok-floatleft">
+                    <div>
+                        <img src="images/rivier.jpg"
+                            alt="">
+                    </div>
+                    <p>
+                        De Rijn-Maas-Scheldedelta is een rivierdelta in
+                        Nederland en België die
+                        gevormd wordt door de samenvloeiing van de Rijn, de Maas
+                        en de Schelde. Het resultaat is een veelheid van
+                        voormalige
+                        eilanden en zee- en rivierarmen, die samenkomen in
+                        Zeeland, dat het hart van de Delta vormt. In het
+                        stroomgebied van de Schelde wonen meer dan 10 miljoen
+                        mensen.
+                        De Rijn-Maasdelta is tevens een van de Nederlandse
+                        landschappen. Met deze benaming wordt het
+                        Midden-Nederlandse
+                        rivierlandschap en de daaraan grenzende
+                        veenweidegebieden aangeduid.
+                    </p>
+                </div>
+                <div class="informatieblok-floatright">
+                    <div>
+                        <img src="images/1200px-Map_of_the_Netherlands.svg.png"
+                            alt="">
+                    </div>
+                    <p>
+                        Nederland bestaat voor een groot deel uit het
+                        aaneengesloten deltagebied van de rivieren Rijn, Maas en
+                        Schelde. Hun mondingen, die merendeels door
+                        getijdenwerking zijn
+                        verbreed tot estuaria, liggen in de provincies Zeeland
+                        en Zuid-Holland. Ook de Betuwe, de Bommelerwaard en
+                        delen van het Groene Hart behoorden van oorsprong tot
+                        het deltagebied van de Rijn en de Maas. De meeste
+                        riviertakken kwamen niet direct in open zee uit, maar
+                        vulden de moerassige lagune achter de Hollandse
+                        strandwal. De Rijntakken IJssel en Vecht bouwden kleine
+                        delta's uit
+                        in de voormalige Zuiderzee.
+                    </p>
+
+                    <p>
+                        De vorm van de Rijndelta wordt bepaald door twee vertakkingen: ten eerste op Millingen aan de Rijnsplitst de Rijn zich in de Waal en de Nederrijn, 
+                    en ten tweede dichtbij Arnhem, de IJssel vertakt zich van de Nederrijn. Hierdoor ontstaan ​​drie hoofdstromen, waarvan er twee nogal vaak van naam veranderen. De grootste en zuidelijke 
+                    hoofdtak begint als de Waal en gaat verder als de Boven Merwede ("Upper Merwede"), de Beneden Merwede ("Lower Merwede"), de Noord-rivier ("North River"), de Nieuwe Maas ("Nieuwe Maas"), 
+                    Het Scheur ("de Rip") en de Nieuwe Waterweg ("Nieuwe waterweg"). De middelste stroom begint als de Nederrijn, verandert dan in de Lek, voegt zich vervolgens bij de Noord en vormt zo de Nieuwe Maas. 
+                    De noordelijke stroom behoudt de naam IJssel totdat deze uitmondt in het meer IJsselmeer​Nog drie stromen dragen aanzienlijke hoeveelheden water: de Nieuwe Merwede ("New Merwede"), die aftakt van de zuidelijke tak 
+                    waar hij overgaat van de Boven naar de Beneden Merwede; de Oude Maas ("Oude Maas"), die aftakt van de zuidelijke tak waar hij overgaat van de Benede Merwede in de Noord, en de Dordtsche Kil, die aftakt van de Oude Maas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="kaart">
+                <div id="rmskaart"></div>
+            </div>
+
+            <div class="informatieblok">
+                <div class="informatieblok-floatleft">
+                    <div>
+                        <img src="images/brug.png" alt="">
+                    </div>
+                    <p>
+                        Nederland kent volgens het Köppen-systeem een gematigd
+                        zeeklimaat (type Cfb) met relatief milde winters, milde
+                        zomers en neerslag gedurende het hele jaar.
+                        Dit klimaat heeft Nederland te danken aan de invloed van
+                        de Noordzee. Een andere benaming voor een gematigd
+                        zeeklimaat is een gematigd maritiem klimaat.
+                        Onder veel Nederlanders heerst het idee dat Nederland
+                        een zeer nat klimaat heeft, maar dat is een misvatting
+                        die vooral gebaseerd is op het gevoel en niet op
+                        cijfers.
+                        Gemiddeld valt er gedurende 7% van de tijd in Nederland
+                        neerslag in de vorm van regen, sneeuw, ijzel of hagel.
+                        Dat staat gelijk aan ongeveer één uur en veertig minuten
+                        aan neerslag per dag.
+                        In totaal valt er op jaarbasis gemiddeld zo'n 800 tot
+                        900 millimeter aan neerslag. Gedurende extreem droge
+                        jaren kan de teller lokaal onder de vijfhonderd
+                        millimeter blijven steken,
+                        in zeer natte jaren kan de neerslagsom oplopen tot maar
+                        liefst zo'n duizend millimeter. Op 8 maart 2013 is er
+                        overigens een neerslagrecord neergezet dat nooit meer
+                        verbroken kan worden:
+                        voor het eerst sinds het vastleggen van weercijfers
+                        heeft het in De Bilt officieel alle 24 uren van het
+                        etmaal geregend. Dat betekent dat er tijdens iedere
+                        meting (om de tien minuten) tenminste 0,1 millimeter
+                        neerslag geregistreerd is.
+                    </p>
+                </div>
+                <div class="informatieblok-floatright">
+                    <div>
+                        <img src="images/Vlinder-dagpauwoog-Cindy Kuiphuis-NAMO103122.jpg" alt="">
+                    </div>
+                    
+                    <p>
+                        Volgens biogeografen behoort de flora en fauna van Nederland tot het holarctische rijk, 
+                        en daarbinnen tot de Eurosiberische regio en de Atlantische provincie. In Nederland worden vijftien plantengeografische 
+                        districten onderscheiden, die elk een eigen klimaat, bodemgesteldheid, waterhuishouding en eigen soorten hebben. 
+                        In Nederland komen circa 1400 soorten hogere planten voor en 800 soorten mossen. Daarnaast zijn er nog duizenden 
+                        soorten paddenstoelen (macrofungi) of andere schimmels, korstmossen en algen.
+                    </p>
+
+                    <p>
+                        In Nederland komen ruim 50 soorten zoogdieren, zo'n 600
+                        soorten broed- en trekvogels, tientallen vissoorten
+                        en duizenden ongewervelden voor. Ondanks de geringe
+                        afmetingen heeft Nederland toch endemische dieren
+                        ((onder)soorten die alleen in
+                        Nederland voorkomen), zoals de Grote vuurvlinder, een
+                        ondersoort van de grote vuurvlinder.
+
+                        Door de ligging in Europa en het veelvuldige verkeer is
+                        er een regelmatige aanvoer van adventieven, die zich
+                        soms met enig succes
+                        als exoot kunnen vestigen, zoals de halsbandparkiet en
+                        de driehoeksmossel, en die in enkele gevallen een plaag
+                        vormen, zoals de
+                        Japanse duizendknoop (Fallopia japonica). De soorten die
+                        hier voorkomen zijn bijna allemaal relatieve nieuwkomers
+                        (van na de IJstijden);
+                        zo zijn konijn, fazant en tamme kastanje in historische
+                        tijden ingevoerd. De hier algemene soorten zijn erg
+                        concurrentiekrachtig.
+                        Geregeld wordt geprobeerd soorten die hier zijn
+                        uitgeroeid opnieuw te introduceren, soms met succes
+                        zoals de raaf, de bever, en de otter.
+                        De zeearend heeft zich op eigen gelegenheid gevestigd,
+                        de wolf eveneens. Terugkeer van wat grotere roofdieren
+                        als de wolf en de lynx blijft controversieel.
+                    </p>
+                </div>
+            </div> -->
+
+        <div class="container"> <!-- Container van je grid -->
+            <div class="page-hero">
+                <div class="hero-img">
+                    <img src="images/RMS.jpg" alt="">
+                    <h1 class="rms-hero-txt">
+                        RMS DELTA
+                    </h1>
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro-txt">
+                    <p>De Rijn-Maas-Scheldedelta is een rivierdelta in Nederland
+                        en België die gevormd wordt door de samenvloeiing van de
+                        Rijn, de Maas en de Schelde. Het resultaat is een
+                        veelheid van voormalige eilanden en zee- en rivierarmen,
+                        die samenkomen in Zeeland, dat het hart van de Delta
+                        vormt. In het stroomgebied van de Schelde wonen meer dan
+                        10 miljoen mensen. De Rijn-Maasdelta is tevens een van
+                        de Nederlandse landschappen. Met deze benaming wordt het
+                        Midden-Nederlandse rivierlandschap en de daaraan
+                        grenzende veenweidegebieden aangeduid.
+                        Nederland bestaat voor een groot deel uit het
+                        aaneengesloten deltagebied van de rivieren Rijn, Maas en
+                        Schelde. Hun mondingen, die merendeels door
+                        getijdenwerking zijn verbreed tot estuaria, liggen in de
+                        provincies Zeeland en Zuid-Holland. Ook de Betuwe, de
+                        Bommelerwaard en delen van het Groene Hart behoorden van
+                        oorsprong tot het deltagebied van de Rijn en de Maas. De
+                        meeste riviertakken kwamen niet direct in open zee uit,
+                        maar vulden de moerassige lagune achter de Hollandse
+                        strandwal. De Rijntakken IJssel en Vecht bouwden kleine
+                        delta's uit in de voormalige Zuiderzee.</p>
+                </div>
+            </div>
+            <div class="p1-img">
+                <img src="images/rivier.jpg"
+                    alt="">
+            </div>
+            <div class="p1-txt">
+                <h2>Klimaat</h2>
+                <p>
+                    Nederland kent volgens het Köppen-systeem een gematigd
+                    zeeklimaat (type Cfb) met relatief milde winters, milde
+                    zomers en neerslag gedurende het hele jaar. Dit klimaat
+                    heeft Nederland te danken aan de invloed van de Noordzee.
+                    Een andere benaming voor een gematigd zeeklimaat is een
+                    gematigd maritiem klimaat. Onder veel Nederlanders heerst
+                    het idee dat Nederland een zeer nat klimaat heeft, maar dat
+                    is een misvatting die vooral gebaseerd is op het gevoel en
+                    niet op cijfers. Gemiddeld valt er gedurende 7% van de tijd
+                    in Nederland neerslag in de vorm van regen, sneeuw, ijzel of
+                    hagel. Dat staat gelijk aan ongeveer één uur en veertig
+                    minuten aan neerslag per dag. In totaal valt er op jaarbasis
+                    gemiddeld zo'n 800 tot 900 millimeter aan neerslag.
+                    Gedurende extreem droge jaren kan de teller lokaal onder de
+                    vijfhonderd millimeter blijven steken, in zeer natte jaren
+                    kan de neerslagsom oplopen tot maar liefst zo'n duizend
+                    millimeter. Op 8 maart 2013 is er overigens een
+                    neerslagrecord neergezet dat nooit meer verbroken kan
+                    worden: voor het eerst sinds het vastleggen van weercijfers
+                    heeft het in De Bilt officieel alle 24 uren van het etmaal
+                    geregend. Dat betekent dat er tijdens iedere meting (om de
+                    tien minuten) tenminste 0,1 millimeter neerslag
+                    geregistreerd is.
+                </p>
+            </div>
+            <div class="p2-img">
+                <img src="images/1200px-Map_of_the_Netherlands.svg.png"
+                    alt="">
+            </div>
+            <div class="p2-txt">
+                <h2>Geografie</h2>
+                <p>
+                    De vorm van de Rijndelta wordt bepaald door twee
+                    vertakkingen: ten eerste op Millingen aan de Rijnsplitst de
+                    Rijn zich in de Waal en de Nederrijn, en ten tweede dichtbij
+                    Arnhem, de IJssel vertakt zich van de Nederrijn. Hierdoor
+                    ontstaan ​​drie hoofdstromen, waarvan er twee nogal vaak van
+                    naam veranderen. De grootste en zuidelijke hoofdtak begint
+                    als de Waal en gaat verder als de Boven Merwede ("Upper
+                    Merwede"), de Beneden Merwede ("Lower Merwede"), de
+                    Noord-rivier ("North River"), de Nieuwe Maas ("Nieuwe
+                    Maas"), Het Scheur ("de Rip") en de Nieuwe Waterweg ("Nieuwe
+                    waterweg"). De middelste stroom begint als de Nederrijn,
+                    verandert dan in de Lek, voegt zich vervolgens bij de Noord
+                    en vormt zo de Nieuwe Maas. De noordelijke stroom behoudt de
+                    naam IJssel totdat deze uitmondt in het meer IJsselmeer​Nog
+                    drie stromen dragen aanzienlijke hoeveelheden water: de
+                    Nieuwe Merwede ("New Merwede"), die aftakt van de zuidelijke
+                    tak waar hij overgaat van de Boven naar de Beneden Merwede;
+                    de Oude Maas ("Oude Maas"), die aftakt van de zuidelijke tak
+                    waar hij overgaat van de Benede Merwede in de Noord, en de
+                    Dordtsche Kil, die aftakt van de Oude Maas.
+                </p>
+            </div>
+            <div class="leaflet">
+                <div id="rms"></div>
+            </div>
+            <div class="p3-img">
+                <div>
+                    <img src="images/536d87fd28e282b5ce66af7b27997b67.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="p4-img">
+                <img src="images\vlinder.jpg"
+                    alt="">
+            </div>
+            <div class="p3-txt">
+                <h2>Flora</h2>
+                <p>
+                    Volgens biogeografen behoort de flora en fauna van Nederland
+                    tot
+                    het holarctische rijk, en daarbinnen tot de Eurosiberische
+                    regio
+                    en de Atlantische provincie. In Nederland worden vijftien
+                    plantengeografische districten onderscheiden, die elk een
+                    eigen
+                    klimaat, bodemgesteldheid, waterhuishouding en eigen soorten
+                    hebben. In Nederland komen circa 1400 soorten hogere planten
+                    voor en 800 soorten mossen. Daarnaast zijn er nog duizenden
+                    soorten paddenstoelen (macrofungi) of andere schimmels,
+                    korstmossen en algen.
+                </p>
+            </div>
+            <div class="p4-txt">
+                <h2>Fauna</h2>
+                <p>
+                    In Nederland komen ruim 50 soorten zoogdieren, zo'n 600
+                    soorten
+                    broed- en trekvogels, tientallen vissoorten en duizenden
+                    ongewervelden voor. Ondanks de geringe afmetingen heeft
+                    Nederland toch endemische dieren ((onder)soorten die alleen
+                    in
+                    Nederland voorkomen), zoals de Grote vuurvlinder, een
+                    ondersoort
+                    van de grote vuurvlinder. Door de ligging in Europa en het
+                    veelvuldige verkeer is er een regelmatige aanvoer van
+                    adventieven, die zich soms met enig succes als exoot kunnen
+                    vestigen, zoals de halsbandparkiet en de driehoeksmossel, en
+                    die
+                    in enkele gevallen een plaag vormen, zoals de Japanse
+                    duizendknoop (Fallopia japonica). De soorten die hier
+                    voorkomen
+                    zijn bijna allemaal relatieve nieuwkomers (van na de
+                    IJstijden);
+                    zo zijn konijn, fazant en tamme kastanje in historische
+                    tijden
+                    ingevoerd. De hier algemene soorten zijn erg
+                    concurrentiekrachtig. Geregeld wordt geprobeerd soorten die
+                    hier
+                    zijn uitgeroeid opnieuw te introduceren, soms met succes
+                    zoals
+                    de raaf, de bever, en de otter. De zeearend heeft zich op
+                    eigen
+                    gelegenheid gevestigd, de wolf eveneens. Terugkeer van wat
+                    grotere roofdieren als de wolf en de lynx blijft
+                    controversieel.
+                </p>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i
+                class="fas fa-arrow-up"></i></button>
+
+        <footer>
+            Bas van der Velden
+            <br>
+            Aeres Hogeschool Almere
+            <br>
+            13-07-2021
+        </footer>
+
+        <script src="js/rms.js"></script>
+        <script src="js/scroll.js"></script>
+    </body>
+</html>

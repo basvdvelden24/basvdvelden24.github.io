@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""
+            />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+
+
+        <title>website test</title>
+    </head>
+    <body>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images\LOGOZWART.png" alt="">
+                    </a>
+                </li>
+                <li><a href='rms.html'>RMS Delta</a></li>
+                <li><a href='ganges.html' onclick="return false">Ganges Delta</a></li>
+                <li><a href='overmij.html'>Over mij</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div class="hero">
+            <div class="hero-img">
+                <img id="ganges" src="images/GANGES.jpg" alt="">
+
+                <h1 class="ganges-hero-txt">
+                    GANGES DELTA
+                </h1>
+            </div>
+        </div> -->
+        <!-- <div class="gangesdata">
+            <canvas id="myChart"></canvas>
+        </div> -->
+        <!-- <div class="informatieblok" id="ganges-1">
+            <div class="informatieblok-floatleft">
+                <div>
+                    <img src="images\bovenloop.jpg" alt="">
+                </div>
+                <h2>
+                    Geografie en klimaat
+                </h2>
+                <p>
+                    De delta ligt op het grondgebied van Bangladesh en de
+                    Indiase
+                    deelstaat
+                    West-Bengalen. Er wonen tussen de 125 en 143 miljoen mensen
+                    in het gebied. Een
+                    groot gedeelte van de delta heeft een bevolkingsdichtheid
+                    van meer dan 200
+                    personen per km², wat het een van de meest dichtbevolkte
+                    gebieden in de wereld
+                    maakt.
+                </p>
+            </div>
+            <div class="informatieblok-floatright">
+                <div>
+                    <img src="images\stroomgebiedganges.png" alt="">
+                </div>
+                <p>
+                    De Gangesdelta is een rivierdelta
+                    in de Zuid-Aziatische regio Bengalen. Onder meer de
+                    Brahmaputra en de Ganges
+                    monden uit in de delta, die bestaat uit meer dan 260
+                    rivieren. De Gangesdelta
+                    is de grootste delta ter wereld met een oppervlakte groter
+                    dan 105.000 km².
+                    Tevens is het een van de meest vruchtbare regio's van de
+                    wereld, waardoor het
+                    gebied ook de "groene delta" wordt genoemd. Langs de
+                    mondingen van de
+                    Ganges in de Golf van Bengalen, de grootste baai ter wereld,
+                    ligt het
+                    moerasgebied van de Sundarbans, met het grootste mangrovebos
+                    ter wereld.
+                </p>
+            </div>
+        </div>
+
+        <div class="kaart">
+            <div id="gangeskaart"></div>
+        </div>
+
+        <div class="informatieblok">
+            <div class="informatieblok-floatleft">
+                <div class="img">
+                    <img src="images/Sundarbans-1920x1080.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        De Gangesdelta kent drie
+                        verschillende ecoregio's. Het gebied telt veel rivieren,
+                        moerassen en meren.
+                        Natte gebieden staan vol met lange grassoorten. In de
+                        moerasbossen van de
+                        Sundarbans, dicht bij de Golf van Bengalen gelegen,
+                        staat
+                        brak water tijdens
+                        het droge seizoen en zoet water tijdens de moesson. In
+                        het
+                        gebied waar de delta
+                        bij de Golf komt beslaat de mangrove van de Sundarbans
+                        ruim
+                        20.400 km².
+                    </p>
+                </div>
+            </div>
+            <div class="informatieblok-floatright">
+                <div class="img">
+                    <img src="images/sunderbans_tiger.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        In de delta komen onder meer de
+                        tijgerpython , nevelpanter, de Indische
+                        olifant en krokodillen voor. Er leven nog ongeveer
+                        duizend Bengaalse tijgers in het gebied. In het
+                        zuidelijke gebied van de delta komen ongeveer 30.000
+                        axisherten voor. Het
+                        gebied telt een groot aantal soorten vogels, waaronder
+                        de
+                        specht, ijsvogel,
+                        arend, treurmaina, moerasfrankolijnen de dayallijster.
+                        In de
+                        rivieren komen twee
+                        soorten dolfijnen voor, de Irrawaddydolfijn, die via de
+                        Golf
+                        van Bengalen de
+                        delta binnen gaat, en de gangesdolfijn. De gangesdolfijn
+                        is
+                        een zeer zeldzame
+                        soort die met uitsterven is bedreigd. Alleen in het lage
+                        gebied van de Sangu en
+                        in de Gangesdelta komen noemenswaardige populaties voor.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+        <div class="container"> <!-- Container van je grid -->
+            <div class="page-hero">
+                <div class="hero-img">
+                    <img src="images/GANGES.jpg" alt="">
+                    <h1 class="rms-hero-txt">
+                        GANGES DELTA
+                    </h1>
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro-txt">
+                    <p>De Gangesdelta is een rivierdelta in de Zuid-Aziatische
+                        regio Bengalen. Onder meer de Brahmaputra en de Ganges
+                        monden uit in de delta, die bestaat uit meer dan 260
+                        rivieren. De Gangesdelta is de grootste delta ter wereld
+                        met een oppervlakte groter dan 105.000 km². Tevens is
+                        het een van de meest vruchtbare regio's van de wereld,
+                        waardoor het gebied ook de "groene delta" wordt genoemd.
+                        Langs de mondingen van de Ganges in de Golf van
+                        Bengalen, de grootste baai ter wereld, ligt het
+                        moerasgebied van de Sundarbans, met het grootste
+                        mangrovebos ter wereld.
+
+                        De delta ligt op het grondgebied van Bangladesh en de
+                        Indiase deelstaat West-Bengalen. Er wonen tussen de 125
+                        en 143 miljoen mensen in het gebied. Een groot gedeelte
+                        van de delta heeft een bevolkingsdichtheid van meer dan
+                        200 personen per km², wat het een van de meest
+                        dichtbevolkte gebieden in de wereld maakt.</p>
+                </div>
+            </div>
+            <div class="p1-img">
+                <img src="images/bovenloop.jpg"
+                    alt="">
+            </div>
+            <div class="p1-txt">
+                <h2>Klimaat</h2>
+                <p>
+                    De Delta heeft een tropisch klimaat. De gemiddelde
+                    jaarneerslag varieert tussen de 1500 en 2000 mm in het
+                    westelijke gedeelte en 2000 en 300 mm in het oosten. In
+                    november 1970 richtte de tropische cycloon Bhola veel schade
+                    aan in het gebied. 300.000 tot 500.000 mensen overleden door
+                    de storm en de daarop volgende overstromingen in het
+                    deltagebied. Het was de dodelijkste cycloon die ooit is
+                    vastgelegd. In 1991 werd de Gangesdelta wederom op
+                    grootschalige wijze getroffen door een cycloon en
+                    overstromingen, waarbij ruim 138.000 mensen overleden.
+                </p>
+            </div>
+            <div class="p2-img">
+                <img src="images/stroomgebiedganges.png"
+                    alt="">
+            </div>
+            <div class="p2-txt">
+                <h2>Geografie</h2>
+                <p>
+                    De Gangesdelta heeft de vorm van een boog. Hij beslaat een
+                    oppervlakte van meer dan 105.000 km² en hoewel hij
+                    voornamelijk in Bangladesh en India is gelegen, stromen ook
+                    rivieren uit Bhutan, China en Nepal het gebied binnen vanuit
+                    het noorden. Ongeveer een derde van de rivierdelta ligt in
+                    Bangladesh. Een groot deel van de delta bestaat uit
+                    alluviale bodems, ontstaan door fijn sediment dat naar de
+                    bodem zakt wanneer de sterkte van een rivierstroming afzwakt
+                    in het estuarium. De bodem bevat grote hoeveelheden
+                    mineralen en nutriënten, wat voordelig is voor de lokale
+                    landbouw. De Gangesdelta kan in twee delen worden verdeeld:
+                    actief (oosten) en minder actief (westen). Enkele grote
+                    rivieren vinden hun weg door de delta, waaronder de Padma en
+                    de Yamuna, welke zich samenvoegen met de Meghna alvorens uit
+                    te monden in de zee.
+                </p>
+            </div>
+            <div class="leaflet">
+                <div id="ganges"></div>
+            </div>
+            <div class="p3-img">
+                <div>
+                    <img src="images/Sundarbans-1920x1080.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="p4-img">
+                <img src="images/sunderbans_tiger.jpg"
+                    alt="">
+            </div>
+            <div class="p3-txt">
+                <h2>Flora</h2>
+                <p>
+                    De Gangesdelta kent drie verschillende ecoregio's. Het
+                    gebied telt veel rivieren, moerassen en meren. Natte
+                    gebieden staan vol met lange grassoorten. In de moerasbossen
+                    van de Sundarbans, dicht bij de Golf van Bengalen gelegen,
+                    staat brak water tijdens het droge seizoen en zoet water
+                    tijdens de moesson. In het gebied waar de delta bij de Golf
+                    komt beslaat de mangrove van de Sundarbans ruim 20.400 km².
+                </p>
+            </div>
+            <div class="p4-txt">
+                <h2>Fauna</h2>
+                <p>
+                    In de delta komen onder meer de tijgerpython , nevelpanter,
+                    de Indische olifant en krokodillen voor. Er leven nog
+                    ongeveer duizend Bengaalse tijgers in het gebied. In het
+                    zuidelijke gebied van de delta komen ongeveer 30.000
+                    axisherten voor. Het gebied telt een groot aantal soorten
+                    vogels, waaronder de specht, ijsvogel, arend, treurmaina,
+                    moerasfrankolijnen de dayallijster. In de rivieren komen
+                    twee soorten dolfijnen voor, de Irrawaddydolfijn, die via de
+                    Golf van Bengalen de delta binnen gaat, en de gangesdolfijn.
+                    De gangesdolfijn is een zeer zeldzame soort die met
+                    uitsterven is bedreigd. Alleen in het lage gebied van de
+                    Sangu en in de Gangesdelta komen noemenswaardige populaties
+                    voor.
+                </p>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i
+                class="fas fa-arrow-up"></i></button>
+
+        <footer>
+            Bas van der Velden
+            <br>
+            Aeres Hogeschool Almere
+            <br>
+            13-07-2021
+        </footer>
+
+        <script src="js/scroll.js"></script>
+        <script src="js/data/gangesdata.js"></script>
+        <script src="js/ganges.js"></script>
+        <script src="js/chartjs/chartganges.js"></script>
+    </body>
+</html>

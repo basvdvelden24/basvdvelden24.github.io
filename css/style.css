@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+#menu {
+  color: #181818;
+  background-color: #f9f9f9;
+  height: 60px;
+  padding-left: 18px;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+#menu ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+#menu li {
+  color: #181818;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+#menu li a img {
+  height: auto;
+  padding-top: 33.3%;
+  width: 40px;
+}
+
+#menu li a:hover {
+  color: #0099cc;
+  background: #f2f2f2;
+}
+
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+
+#menu a {
+  display: block;
+  line-height: 60px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #181818;
+  font-size: 16px;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#menu label {
+  display: none;
+  line-height: 60px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+
+#menu label:before {
+  font-size: 1.6em;
+  content: "\2261";
+  margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+#menu ul.sub-menus a:hover {
+  background: #f2f2f2;
+  color: #444444;
+}
+
+@media screen and (max-width: 800px) {
+  #menu {
+    position: relative;
+  }
+  #menu ul {
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+  }
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  #menu input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 4;
+  }
+  #menu input:checked + label {
+    color: white;
+  }
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+  #menu input:checked ~ ul {
+    display: block;
+  }
+  #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}
+
+.hero {
+  height: 115vh;
+}
+
+.hero .hero-img {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero .hero-img #ganges {
+  height: 200%;
+}
+
+.hero .hero-img img {
+  height: inherit;
+  width: 100%;
+}
+
+.hero .hero-img .ganges-hero-txt,
+.hero .hero-img .rms-hero-txt {
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  font-size: 75px;
+}
+
+.hero .hero-img h1 {
+  top: 42.5%;
+  right: 150px;
+  position: absolute;
+  color: white;
+  font-weight: 500;
+}
+
+.hero .hero-img h4 {
+  top: 50%;
+  right: 150px;
+  position: absolute;
+  color: white;
+  font-weight: 200;
+  text-align: right;
+}
+
+.hero .herofloat {
+  margin-top: -8%;
+}
+
+.hero .herofloat .image-1 {
+  border: solid 18px #f9f9f9;
+  width: 33%;
+  height: 250px;
+  margin-left: 10%;
+  float: left;
+  z-index: 999;
+  position: relative;
+}
+
+.hero .herofloat .image-1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .herofloat .image-1 a {
+  text-decoration: none;
+  color: #181818;
+}
+
+.hero .herofloat .image-1 a h2 {
+  font-weight: 400;
+  margin-top: -0.5%;
+}
+
+.hero .herofloat .image-1 a:hover {
+  color: #4eb0ce;
+}
+
+.hero .herofloat .image-2 {
+  border: solid 18px #f9f9f9;
+  width: 33%;
+  height: 250px;
+  float: right;
+  margin-right: 10%;
+  z-index: 999;
+  position: relative;
+}
+
+.hero .herofloat .image-2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .herofloat .image-2 a {
+  text-decoration: none;
+  color: #181818;
+}
+
+.hero .herofloat .image-2 a h2 {
+  font-weight: 400;
+  margin-top: -0.5%;
+}
+
+.hero .herofloat .image-2 a:hover {
+  color: #4eb0ce;
+}
+
+.homeblok {
+  height: 80vh;
+  padding: 5% 10%;
+  background-color: #181818;
+  color: #f9f9f9;
+}
+
+.homeblok h2 {
+  font-size: 36px;
+}
+
+.homeblok p {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+footer {
+  height: 10vh;
+  text-align: center;
+  padding: 5% 0%;
+  background-color: #333131;
+  color: #f9f9f9;
+  line-height: 30px;
+}
+
+.kaart {
+  height: 600px;
+  max-width: 100%;
+  padding: 0 5%;
+  margin: 5% 0;
+}
+
+.kaart #gangeskaart {
+  height: inherit;
+  width: inherit;
+}
+
+.gangesdata {
+  height: 500px;
+  width: 1000px;
+}
+
+.gangesdata #myChart {
+  height: 100%;
+  width: 100%;
+}
+
+#ganges-1 {
+  height: 600px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-color: rgba(73, 127, 202, 0.8);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: #205768;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr min-content min-content min-content min-content min-content min-content min-content min-content min-content;
+      grid-template-rows: 1fr -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+      grid-template-rows: 1fr min-content min-content min-content min-content min-content min-content min-content min-content min-content;
+  gap: 1em 5em;
+  grid-auto-flow: row;
+      grid-template-areas: "page-hero page-hero" "page-hero page-hero" "page-hero page-hero" "intro intro" "p1-img p2-img" "p1-txt p2-txt" "leaflet leaflet" "p3-img p3-txt" "p4-txt p4-img" ". .";
+}
+
+.p2-img,
+.p2-txt,
+.p3-txt,
+.p4-img {
+  margin-right: 10%;
+}
+
+.p1-img, .p1-txt,
+.p3-img, .p4-txt {
+  margin-left: 10%;
+}
+
+.page-hero {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: page-hero;
+  margin-bottom: 25px;
+}
+
+.page-hero .hero-img {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.page-hero .hero-img img {
+  height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-hero .hero-img .ganges-hero-txt,
+.page-hero .hero-img .rms-hero-txt {
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  font-size: 75px;
+}
+
+.page-hero .hero-img h1 {
+  top: 42.5%;
+  right: 150px;
+  position: absolute;
+  color: white;
+  font-weight: 500;
+}
+
+.page-hero .hero-img h4 {
+  top: 50%;
+  right: 150px;
+  position: absolute;
+  color: white;
+  font-weight: 200;
+  text-align: right;
+}
+
+.intro {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: intro;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.intro .intro-txt {
+  border: 2px solid black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro .intro-txt p {
+  padding: 30px;
+}
+
+.p1-img,
+.p2-img,
+.p3-img,
+.p4-img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.p1-img img,
+.p2-img img,
+.p3-img img,
+.p4-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.p1-img {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: p1-img;
+}
+
+.p1-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 15% 50% !important;
+     object-position: 15% 50% !important;
+}
+
+.p1-txt {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: p1-txt;
+}
+
+.p2-img {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: p2-img;
+}
+
+.p2-txt {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: p2-txt;
+}
+
+.leaflet {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: leaflet;
+}
+
+.leaflet #rms,
+.leaflet #ganges {
+  height: 600px;
+  width: 100%;
+}
+
+.p3-img {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: p3-img;
+}
+
+.p3-img div {
+  height: 450px;
+}
+
+.p3-img div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p4-img {
+  -ms-grid-row: 9;
+  -ms-grid-column: 2;
+  grid-area: p4-img;
+}
+
+.p3-txt {
+  -ms-grid-row: 8;
+  -ms-grid-column: 2;
+  grid-area: p3-txt;
+}
+
+.p4-txt {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: p4-txt;
+}
+/*# sourceMappingURL=style.css.map */
