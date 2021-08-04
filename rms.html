@@ -24,17 +24,24 @@
     </head>
     <body>
         <nav id='menu'>
+            <div class="mobile-menu-img">
+                <img src="images/LOGOZWART.png"
+                    alt="">
+            </div>
             <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
             <ul>
-                <li class="left">
+                <div class="left">
+                <li>
                     <a href="index.html">
-                        <img src="images\LOGOZWART.png" alt="">
+                        <img class="logo-image" src="images/LOGOZWART.png"
+                            alt="">
                     </a>
                 </li>
+                </div>
                 <div class="right">
-                    <li><a href='rms.html' class="active" onclick="return false" >RMS Delta</a></li>
-                    <li><a href='ganges.html'>Ganges Delta</a></li>
-                    <li><a href='overmij.html'>Over mij</a></li>
+                    <li><a href="rms.html" onclick="return false" class="active"><p>RMS Delta</p></a></li>
+                    <li><a href="ganges.html">Ganges Delta</a></li>
+                    <li><a href="overmij.html">Over mij</a></li>
                 </div>
             </ul>
         </nav>
