@@ -104,6 +104,13 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .hero {
+        height: 300vh;
+    }
+}
+
 .homeblok {
     height: 80vh;
     padding: 5% 10%;
