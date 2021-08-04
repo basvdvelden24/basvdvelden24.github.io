@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/menu.css">
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,14 +27,16 @@
         <nav id='menu'>
             <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
             <ul>
-                <li>
+                <li class="left">
                     <a href="index.html">
                         <img src="images\LOGOZWART.png" alt="">
                     </a>
                 </li>
-                <li><a href='rms.html'>RMS Delta</a></li>
-                <li><a href='ganges.html' onclick="return false">Ganges Delta</a></li>
-                <li><a href='overmij.html'>Over mij</a></li>
+                <div class="right">
+                    <li><a href='rms.html'>RMS Delta</a></li>
+                    <li><a class="active" onclick="return false" href='ganges.html'>Ganges Delta</a></li>
+                    <li><a href='overmij.html'>Over mij</a></li>
+                </div>
             </ul>
         </nav>
 
