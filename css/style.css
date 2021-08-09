@@ -6,7 +6,7 @@ html {
 body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .hero {
@@ -62,7 +62,7 @@ body {
 }
 
 .hero .herofloat .image-1 {
-  border: solid 18px #f9f9f9;
+  border: solid 18px #fff;
   width: 33%;
   height: 250px;
   margin-left: 10%;
@@ -93,7 +93,7 @@ body {
 }
 
 .hero .herofloat .image-2 {
-  border: solid 18px #f9f9f9;
+  border: solid 18px #ffffff;
   width: 33%;
   height: 250px;
   float: right;
@@ -125,7 +125,8 @@ body {
 
 @media screen and (max-width: 800px) {
   .hero .hero-img {
-    height: 120vh;
+    min-height: 120vh;
+    margin-bottom: 100vh;
   }
   .hero .hero-img #ganges {
     height: 200%;
@@ -163,12 +164,14 @@ body {
   }
   .hero .herofloat {
     margin-top: -8%;
+    min-height: 200vh;
+    margin-bottom: 100vh;
   }
   .hero .herofloat .image-1 {
-    border: solid 18px #f9f9f9;
-    width: 33%;
-    height: 250px;
-    margin-left: 10%;
+    border: solid 8px #f9f9f9;
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
     float: left;
     z-index: 999;
     position: relative;
@@ -191,11 +194,11 @@ body {
     color: #4eb0ce;
   }
   .hero .herofloat .image-2 {
-    border: solid 18px #f9f9f9;
-    width: 33%;
-    height: 250px;
-    float: right;
-    margin-right: 10%;
+    border: solid 8px #f9f9f9;
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-right: 0%;
     z-index: 999;
     position: relative;
   }
@@ -219,7 +222,8 @@ body {
 }
 
 .homeblok {
-  height: 80vh;
+  margin-top: 10vh;
+  min-height: 50vh;
   padding: 5% 10%;
   background-color: #181818;
   color: #f9f9f9;
@@ -232,6 +236,23 @@ body {
 .homeblok p {
   font-size: 20px;
   line-height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .homeblok {
+    margin-top: 230vh;
+    min-height: 50vh;
+    padding: 5% 10%;
+    background-color: #181818;
+    color: #f9f9f9;
+  }
+  .homeblok h2 {
+    font-size: 36px;
+  }
+  .homeblok p {
+    font-size: 20px;
+    line-height: 40px;
+  }
 }
 
 footer {
@@ -424,6 +445,13 @@ footer {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: p1-txt;
+}
+
+.p1-txt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
 }
 
 .p2-img {

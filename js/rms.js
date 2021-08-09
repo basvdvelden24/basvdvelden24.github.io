@@ -5,8 +5,8 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 });
 
 var map = L.map(
-    "rms", { //<-- nieuw id geven
-    center: [52.1292125,5.4497806], //coordinaten aanpassen
+    "rms", { 
+    center: [52.1292125,5.4497806], 
     zoom: 7,
     layers: [osm],
 });

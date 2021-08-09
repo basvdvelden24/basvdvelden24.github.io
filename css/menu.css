@@ -143,7 +143,7 @@
 @media screen and (max-width: 800px) {
   #menu {
     position: relative;
-    background: darkgray;
+    background: #9b9898;
     color: white;
   }
   #menu .mobile-menu-img {
@@ -172,8 +172,7 @@
     height: auto;
     display: none;
   }
-  #menu ul li.left {
-    float: left;
+  #menu ul .left {
     display: none;
   }
   #menu ul .right {
