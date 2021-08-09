@@ -13,6 +13,9 @@
             />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <link rel="stylesheet"
@@ -358,7 +361,12 @@
                     controversieel.
                 </p>
             </div>
+
         </div>
+
+        <div class="chartganges">
+            <canvas id="chartganges"></canvas>
+          </div>
 
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i
                 class="fas fa-arrow-up"></i></button>
@@ -373,5 +381,6 @@
 
         <script src="js/rms.js"></script>
         <script src="js/scroll.js"></script>
+        <script src="js/chartjs/chartganges.js"></script>
     </body>
 </html>

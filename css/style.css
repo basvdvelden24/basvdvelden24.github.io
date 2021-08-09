@@ -590,4 +590,13 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.chartganges {
+  grid-area: grafiek;
+}
+
+.chartganges #chartganges {
+  height: 600px;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
