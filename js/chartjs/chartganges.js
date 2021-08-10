@@ -10,8 +10,8 @@ var chart = new Chart(ctx, {
             datasets: [{
                 type: "bar",
                 label: "Gemiddelde hoeveelheid neerslag (mm) per maand Bangladesh",
-                backgroundColor: 'rgb(217,79,151,0.3)',
-                borderColor: 'rgb(217,79,151)',
+                backgroundColor: 'rgb(22, 214, 240,0.3)',
+                borderColor: 'rgb(22, 214, 240)',
                 borderWidth: '2',
                 pointRadius: '0',
                 fill: true,
@@ -20,19 +20,19 @@ var chart = new Chart(ctx, {
             }, {
                 type: "bar",
                 label: "Gemiddelde hoeveelheid neerslag (mm) per maand Nederland",
-                backgroundColor: 'rgb(5,82,159,0.3)',
-                borderColor: 'rgb(5,82,159)',
-                borderWidth: '1',
+                backgroundColor: 'rgb(26, 88, 235,0.3)',
+                borderColor: 'rgb(26, 88, 235)',
+                borderWidth: '2',
                 pointRadius: '0',
                 fill: true,
                 yAxisID: 'Y-axis-1',
                 data: [120, 90, 105, 115, 105, 135, 110, 125, 140, 105, 115, 118]
             }, {
                 type: "line",
-                label: 'Gemiddelde temperatuur Bangladesh',
-                backgroundColor: 'rgb(217,82,159)',
-                borderColor: 'rgb(217,79,151)',
-                borderWidth: '5.5',
+                label: 'Gemiddelde temperatuur Bangladesh in °C',
+                backgroundColor: 'rgb(250, 10, 10)',
+                borderColor: 'rgb(250, 20, 20)',
+                borderWidth: '5',
                 pointRadius: '0',
                 fill: false,
                 yAxisID: 'Y-axis-2',
@@ -40,10 +40,10 @@ var chart = new Chart(ctx, {
                 data: [20, 23, 26, 28, 28, 27, 26, 26, 26, 26, 24, 22]
             }, {
                 type: "line",
-                label: 'Gemiddelde neerslag Amsterdam',
-                backgroundColor: 'rgb(5,82,159)',
-                borderColor: 'rgb(5,82,159)',
-                borderWidth: '4',
+                label: 'Gemiddelde temperatuur Nederland in °C',
+                backgroundColor: 'rgb(166, 5, 5)',
+                borderColor: 'rgb(166, 5, 5)',
+                borderWidth: '5',
                 pointRadius: '0',
                 fill: false,
                 yAxisID: 'Y-axis-2',
@@ -58,7 +58,7 @@ var chart = new Chart(ctx, {
             maintainAspectRatio: false,
             animation: {
                 easing: 'linear',
-                duration: 1700
+                duration: 2700
             },
             scales: {
                 yAxes: [{
