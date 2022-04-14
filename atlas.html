@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/menu.css">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""
+            />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>website test</title>
+    </head>
+    <body>
+        <nav id='menu'>
+            <div class="mobile-menu-img">
+                <img src="images/LOGOZWART.png"
+                    alt="">
+            </div>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <div class="left">
+                    <li>
+                        <a href="index.html">
+                            <img class="logo-image" src="images/LOGOZWART.png"
+                                alt="">
+                        </a>
+                    </li>
+                </div>
+                <div class="right">
+                    <li><a href="rms.html" onclick="return false"
+                            class="active"><p>RMS Delta</p></a></li>
+                    <li><a href="ganges.html">Ganges Delta</a></li>
+                    <li><a href="overmij.html">Over mij</a></li>
+                    <li><a href="atlas.html">Atlas</a></li>
+                </div>
+            </ul>
+        </nav>
+
+
+        <div class="container"> <!-- Container van je grid -->
+            <div class="page-hero">
+                <div class="hero-img">
+                    <img src="images/zeeland banner.jpg" alt="">
+                    <h1 class="rms-hero-txt">
+                        ATLAS
+                    </h1>
+                </div>
+            </div>
+            <div class="intro">
+                <div class="intro-txt">
+                    <p>Deze Atlas pagina gaat over de ontwikkeling van de
+                        Provincie Zeeland en is gemaakt voor HSFM09. De keuze
+                        voor Zeeland
+                        komt voordt uit mijn HWUD opdracht. Bij HWUD had ik mijn
+                        website gemaakt over de RMS en Ganges delta.
+                        Zeeland speelt een grote rol in de RMS delta en het leek
+                        mij dus erg leuk om hier verder op in te gaan.
+                        Zeeland heeft al een eeuwige strijd tegen het water en
+                        deze website kan helpen bij het inzichtelijk krijgen
+                        van wat er allemaal wordt gedaan om Zeeland veilig te
+                        houden.
+                        <br>
+                        <br>
+                        Ook zit er nog een kleine link in naar de Ganges Delta.
+                        Daar is namelijk een Nederlands project opgezet om dat
+                        gebied
+                        ook te beschermen tegen het water. Meer informatie
+                        hierover vindt u bij het kopje Deltawerken.
+                    </p>
+                </div>
+            </div>
+            <div class="p1-img">
+                <img src="images/zeeland_2_-640x506.jpg"
+                    alt="">
+            </div>
+            <div class="p1-txt">
+                <div>
+                    <h2>Geschiedenis</h2>
+                    <img src="images/gif zon.gif" alt="">
+                </div>
+
+                <p>
+                    Zeeland werd reeds voor de tijd van de Romeinen bewoond. Uit
+                    die tijd stammen ook de beelden van o.a. de godin
+                    Nehalennia, die door vissers in de Oosterschelde zijn
+                    gevonden.
+                    Sinds de middeleeuwen is de strijd tegen het water een rode
+                    draad door de geschiedenis. Aanwinning en verlies van land
+                    wisselden elkaar af. Vrijwel de hele provincie (behalve de
+                    duinstreek) ligt op of onder zeeniveau. Het landschap is een
+                    lappendeken van polder(tje)s en dijken. De geografie van
+                    Zeeland is in de loop van de tijd grondig gewijzigd. De vele
+                    kleinere eilanden zijn langzamerhand samengegroeid tot de
+                    grotere (schier)eilanden die we nu kennen. Andere voormalige
+                    bewoonde gebieden staan nu onder water (o.a. het Verdronken
+                    Land van Saeftinghe en het Verdronken Land van
+                    Zuid-Beveland).
+                </p>
+            </div>
+            <div class="p2-img">
+                <img src="images/IMG_340_1.jpg"
+                    alt="">
+            </div>
+            <div class="p2-txt">
+                <h2>Geografie</h2>
+                <p>
+                    Zeeland is een provincie in het zuidwesten van Nederland.
+                    Zeeland grenst aan de Nederlandse provincies Zuid-Holland en
+                    Noord-Brabant en de Belgische provincies West-Vlaanderen,
+                    Oost-Vlaanderen en Antwerpen. Zeeland telt 383.488 inwoners
+                    (januari 2020), bestuurlijk centrum van de provincie is de
+                    hoofdstad Middelburg, tevens de grootste stad in de
+                    provincie. De gemeente met de meeste inwoners is echter
+                    Terneuzen in Zeeuws-Vlaanderen. Het bijvoeglijk naamwoord is
+                    Zeeuws en de bewoners heten Zeeuwen.
+                </p>
+            </div>
+            <div class="leaflet">
+                <div id="rms"></div>
+            </div>
+            <div class="p3-img">
+                <div>
+                    <img
+                        src="images/huis verzakt.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="p4-img">
+                <img src="images/delta werken.jpg"
+                    alt="">
+            </div>
+            <div class="p3-txt">
+                <h2>Watersnood van 1953</h2>
+                <p>
+                    De watersnood van 1953, meestal aangeduid als de
+                    Watersnoodramp of Februariramp en aanvankelijk ook wel als
+                    Sint-Ignatiusvloed of Beatrixvloed, voltrok zich in de nacht
+                    van zaterdag 31 januari op zondag 1 februari 1953.De ramp
+                    was het gevolg van een combinatie van zware storm uit
+                    noordwestelijke richting, met een ongunstig daarmee
+                    samenvallend tijdstip van vloed en springtij. Het water in
+                    de trechtervormige zuidelijke Noordzee steeg daardoor tot
+                    extreme hoogte. Te Hoek van Holland, IJmuiden en Harlingen
+                    werd de hoogste waterstand in 100 jaar gemeten,
+                    respectievelijk 3m40, 3m85 en 3m85 hoger dan normaal. Het
+                    gevolg was dat veel dijken overspoeld werden en doorbraken.
+                    Hele eilanden en landstreken inclusief steden en dorpen
+                    raakten overstroomd; dit leidde tot veel slachtoffers en
+                    grote schade.
+                    Het aantal doden bedroeg 1836 in Nederland, 307 in het
+                    Verenigd Koninkrijk, 224 op zee, waaronder 133 bij het
+                    vergaan van een Engelse veerboot en 28 in België. De ramp
+                    was aanleiding voor de ontwikkeling van een sterk verbeterde
+                    kustverdediging met zware stormvloedkeringen. Het meest
+                    ingrijpend zijn de Deltawerken in Nederland, terwijl in
+                    Engeland onder meer de Thames Barrier en een
+                    stormvloedkering in de rivier Hull zijn gebouwd.
+
+                </p>
+            </div>
+            <div class="p4-txt">
+                <h2>Deltawerken</h2>
+                <p>
+                    De Oosterscheldekering is het grootste onderdeel van het
+                    Deltaplan. Het is aangelegd naar aanleiding van de
+                    Watersnood van 1953 als verdedigingswerk tegen het water.
+                    Een ander architectonisch en waterbouwkundig hoogstandje is
+                    de Zeelandbrug die sinds 1965 Schouwen-Duiveland met
+                    Noord-Beveland verbindt. Het was circa 7 jaar de langste
+                    brug ter wereld. Zuid-Beveland en Zeeuws-Vlaanderen worden
+                    sinds 2003 verbonden door de 6600 m lange
+                    Westerscheldetunnel. De veerdiensten, geschikt voor alle
+                    verkeer, over de Westerschelde werden daardoor opgeheven.
+                    Tussen Vlissingen en Breskens werd een nieuwe veerverbinding
+                    opgericht, die alleen voor voetgangers en (brom- en snor)
+                    fietsers geschikt is.
+                    <br>
+                    <br>
+                    Op 4 september 2018 heeft de regering van premier Sheikh
+                    Hasina het Bangladesh Deltaplan 2100 vastgesteld. Het plan
+                    beschrijft nationale en regionale strategieën voor onder
+                    meer klimaatadaptatie tot het jaar 2100. Het
+                    investeringsvolume voor de korte termijn -tot 2030- is 38
+                    miljard dollar. Het plan is op Nederlandse leest geschoeid,
+                    maar gaat veel verder dan het Nederlandse Delta Plan.
+
+
+                </p>
+            </div>
+
+        </div>
+
+        <div class="chartganges">
+            <canvas id="chartganges"></canvas>
+        </div>
+
+        <div class="container-frame">
+            <div class="embed-container">
+                <iframe width="100%" height="100%"
+                    frameborder="0" scrolling="no" marginheight="0"
+                    marginwidth="0"
+                    title="zeeland"
+                    src="https://aereshogeschool.maps.arcgis.com/apps/Embed/index.html?webmap=06eadaf082264561b0ca4e26fade55d0&extent=2.6134,51.1364,5.8489,52.1353&zoom=true&previewImage=false&scale=true&details=true&legend=true&active_panel=details&disable_scroll=true&theme=light"></iframe></div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="intro">
+            <div class="intro-txt">
+                <p>Op deze kaart zijn de deltawerken te zien. Deze visualisatie
+                    is nuttig omdat mijn atlas gaat over de provincie zeeland en
+                    hoe zij omgaat met het water. De deltawerken spelen hier een
+                    grote rol in. Ook kan je de Natura2000 zien. Dit laat zien
+                    dat alle
+                    wateren rond zeeland beschermd zijn. De kaart is gemaakt in
+                    ArcGIS online.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-frame">
+            <iframe id="mapbox" width='100%' height='100%'
+                src="https://api.mapbox.com/styles/v1/basvandervelden/cl1wewnx8003x14piigr8pfwb.html?title=false&access_token=pk.eyJ1IjoiYmFzdmFuZGVydmVsZGVuIiwiYSI6ImNrMzh2ZDlzNzA5bDYzbHQ5Zmx1NXk4aDEifQ.NVsCpQB2ehZaOB-I8oxoDA&zoomwheel=false#7.56/51.665/4.251"
+                title="Monochrome" style="border:none;"></iframe>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="intro">
+            <div class="intro-txt">
+                <p> De kaart laat zien welke gebieden er allemaal waren
+                    overstroomd in Zeeland
+                    tijdens de Watersnoodramp van 1953. Dit is een belangrijke
+                    kaart omdat dit laat zien wat er gebeurde
+                    toen Zeeland nog minder goed beschermd was tegen het water.
+                    Er zijn sinds 1953 veel verbeteringen gekomen met als
+                    gevolg dat Zeeland nu een stuk veiliger is. Deze kaart is
+                    gemaakt in MapBox.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container-frame">
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Sealock
+                    Deltawerken" frameborder="0" allowfullscreen
+                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking execution-while-out-of-viewport
+                    execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/976dc1edc7d14597abe15f4a07523115/embed">
+                </iframe>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="intro">
+            <div class="intro-txt">
+                <p> Op deze 3D animatie kan je de Maeslantkering zien.
+                    <br>
+                    <br>
+                    Geen enkele waterkering ter wereld heeft grotere beweegbare
+                    onderdelen dan de Maeslantkering. Dit Deltawerk kan een
+                    vloedgolf van 5 m boven NAP aan.
+                    <br>
+                    <br>
+                    De Maeslantkering ligt in de Nieuwe Waterweg bij Hoek van
+                    Holland en werd gebouwd tussen 1991 en 1997. Het bouwwerk is
+                    volledig automatisch gestuurd en vormt samen met de
+                    Hartelkering en de dijkverbreding Rozenburg de
+                    Europoortkering. De Maeslantkering is een voorliggende
+                    kering, wat betekent dat hij de eerste klappen opvangt bij
+                    hoogwater vanuit zee. Hiermee beschermt de stormvloedkering
+                    de inwoners van Zuid-Holland.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="infogram-embed"
+            data-id="708f61bb-44f7-412f-be64-dc4aafbf8cb0"
+            data-type="interactive" data-title="Zeeland"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div
+            style="padding:8px
+            0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px
+            solid #dadada;margin:0 30px"><a
+                href="https://infogram.com/708f61bb-44f7-412f-be64-dc4aafbf8cb0"
+                style="color:#989898!important;text-decoration:none!important;"
+                target="_blank">Zeeland</a><br><a href="https://infogram.com"
+                style="color:#989898!important;text-decoration:none!important;"
+                target="_blank" rel="nofollow">Infogram</a></div>
+
+        <div class="intro">
+            <div class="intro-txt">
+                <p> Hier boven is een informatiepaneel over Zeeland. Dit leek
+                    mij gaaf om toe te voegen aan de website.
+
+                </p>
+            </div>
+        </div>
+
+
+        <div class="flourish-embed flourish-chart"
+            data-src="visualisation/9406058"><script
+                src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <iframe title="Goederenvervoer Binnenvaartschepen"
+            aria-label="Interactive line chart" id="datawrapper-chart-eAUuO"
+            src="https://datawrapper.dwcdn.net/eAUuO/1/" scrolling="no"
+            frameborder="0" style="width: 0; min-width: 100% !important; border:
+            none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                </script>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i
+                class="fas fa-arrow-up"></i></button>
+
+        <div class="intro">
+            <div class="intro-txt">
+                <p>De eerste grafiek is gemaakt met Flourish en laat het
+                    verschil in zon uren zien tussen Nederland als geheel en
+                    Zeeland als Provincie.
+                    <br>
+                    <br>
+                    De tweede grafiek is gemaakt in datawrapper en laat het
+                    goederenvervoer zien wat per binnenvaartship word
+                    verscheept. Dit zijn het aantal bewegingen per week
+                    gefilterd op jaar.
+                </p>
+            </div>
+        </div>
+
+
+        <footer>
+            Bas van der Velden
+            <br>
+            Aeres Hogeschool Almere
+            <br>
+            14-04-2022
+        </footer>
+
+        <script src="js/rms.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/chartjs/chartganges.js"></script>
+    </body>
+</html>
